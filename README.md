@@ -17,3 +17,19 @@
 
 # 6- Create the Project 
 
+# 7- Create CI Pipeline
+
+    #a-Get the Source code from the Git repository
+    #b-Add the task to Copy the *.json file.
+    #c-Add another task to publish the artifacts for the release pipeline.
+# 8-Next we need to run the CI pipeline to generate the artifacts.
+
+# 9-Create the Release pipeline .
+
+  #a- Create task to deploy the Vnet 
+  #b- Create task to deploy the VM
+  #c- Here we need to integrate Azure key vault to pass the Admin Password because we did put the password in our script .
+  #d- Create Variable group to integrate the azure key vault .
+  #e- After this we need to pass the variable under the override template parameters.
+   
+
