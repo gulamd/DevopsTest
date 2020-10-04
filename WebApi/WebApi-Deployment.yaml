@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Wepapi-deployment
+spec:
+  selector:
+  matchLabels:
+    app: wepapi-pod
+  template:
+    metadata:
+      labels:
+        app: webapi-pod
+    spec:
+      containers:
+      - name: webapi-container
+        image: __ACR_NAME__.azurecr.io/webapi:v1.#{Build.BuildId}#
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+
+        - containerPort: 80
