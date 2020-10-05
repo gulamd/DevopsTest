@@ -69,3 +69,7 @@
     Task02 : Same thing we have to for the Service as well .Once you have done this then you are ready for the release .
 
 
+# Using Postman we can see the api outout with the below url.
+
+http://service_ip:8080/api_name
+  
