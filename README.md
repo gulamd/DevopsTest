@@ -1,4 +1,5 @@
 # DevopsTest
+# VM DEPLOYMENT USING AZURE DEVOPS PIPELINE
 #  1-We will create a key vault, from the Azure portal, to store the VM password. 
 
   #   2-We will configure access policy for template deployment.
@@ -31,5 +32,17 @@
      #c-Here we need to integrate Azure key vault to pass the Admin Password because we did put the password in our script .
      #d-Create Variable group to integrate the azure key vault .
      #e-From this point, whatever variables you have in your variable group can be accessed from your build pipe as $(VariableNameHere)
-   
 
+
+#########################################################################################
+#  WEPAPI DEPLOYMENT
+
+#  1- Create a service principle 
+      az ad sp create-for-rbac --skip-assignment
+      From output note the "appId": "xxxxxxx","password": "xxxxxxxxxxx"
+#  2- Create the Azure Container Registory 
+#  3- Add role assignment (AcrPull) while role assignment use the service principle appId which we create at point 1
+#  4-Create the AKS cluster and use here SP as well(use appId,Password)
+--------------------------------------------------------------------------------------------
+#  CI PIPELINE
+   
