@@ -45,4 +45,25 @@
 #  4-Create the AKS cluster and use here SP as well(use appId,Password)
 --------------------------------------------------------------------------------------------
 #  CI PIPELINE
+# 1- Create CI pipeline for webapi build.
+     # Add the CI task related to the webapi build
+     # Task-01: Add the task to build the image using th dockerfile:
+     #  Here we need to need to create the connection between ACR and pipeline and select the container repository.
    
+# Task02: -Image push to ACR
+# Task03:-Update the latest build image using the replacement token task.
+          # Here latest build image will update in the deployment file “WebApi-Deployment.yaml” using the token prefix
+# Task04: Copy the Artifacts
+# Task05: Publish the artifact for the release pipeline .
+
+----------------------------------------------------------------------------
+# Release Pipeline:
+    Next Step we have to create the release pipeline using the CI artifact . In the release pipeline we have to select job as Deploy to Kubernetes.
+    Since we have to two definition file on is for the Deployment and other is for the Service.So, we have to create two task 
+
+    Task01: One you add the task then we have to authenticate with the azure portal and need to specify in which name-space.
+            we want to deploy and we need to choose the command for the action so, here we will select “apply” and we will provide the
+            Deployment file location.
+    Task02 : Same thing we have to for the Service as well .Once you have done this then you are ready for the release .
+
+
