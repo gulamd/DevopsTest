@@ -1,4 +1,5 @@
 # DevopsTest
+# SCENARIO: 2
 # VM DEPLOYMENT USING AZURE DEVOPS PIPELINE
 #  1-We will create a key vault, from the Azure portal, to store the VM password. 
 
@@ -35,6 +36,7 @@
 
 
 #########################################################################################
+# SCENARIO: 3
 #  WEPAPI DEPLOYMENT
 
 #  1- Create a service principle 
